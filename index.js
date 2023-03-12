@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import * as dotenv from "dotenv";
 import connectDB from "./config/database.js";
+import authRoutes from "./routes/auth.js";
 
 dotenv.config();
 
@@ -11,6 +12,8 @@ app.use(express.json({ limit: "50mb", extended: true }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 const port = process.env.PORT || 5000;
+
+app.use("/api/auth", authRoutes);
 
 app.get("/", (req, res) => {
   res.json({ msg: "Welcome to the ContactKeeper API..." });
