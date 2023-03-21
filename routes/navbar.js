@@ -1,10 +1,10 @@
 import express from "express";
 import auth from "../middleware/auth.js";
+import { getNavbar , createNavbar } from "../controller/navbar.js";
 
 const router = express.Router();
 
-router.get("/", auth, (req, res) => {
-    res.json({ msg: "Welcome to the ContactKeeper API..." });
-});
+router.get("/get", auth, getNavbar);
+router.post("/create", auth, createNavbar);
 
 export default router;
