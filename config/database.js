@@ -1,15 +1,17 @@
 import mongoose from "mongoose";
 
 const connectDB = async () => {
-    mongoose.connect(process.env.MONGO_DB_URL, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
+  mongoose.set("strictQuery", true);
+  mongoose
+    .connect(process.env.MONGO_DB_URL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
     })
     .then(() => {
-        console.log("MongoDB Connected...");
+      console.log("MongoDB Connected...");
     })
     .catch((error) => {
-        console.error(`Error: ${error.message}`);
+      console.error(`Error: ${error.message}`);
     });
 };
 
