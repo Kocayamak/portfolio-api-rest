@@ -10,7 +10,6 @@ const cloudinaryConfig = async (req, res, next) => {
       api_key: process.env.CLOUDINARY_API_KEY,
       api_secret: process.env.CLOUDINARY_API_SECRET,
     });
-    next();
   } catch (error) {
     console.log(error.message);
   }
