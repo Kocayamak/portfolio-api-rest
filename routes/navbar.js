@@ -4,7 +4,7 @@ import { getNavbar , createNavbar } from "../controller/navbar.js";
 
 const router = express.Router();
 
-router.get("/get", auth, getNavbar);
+router.get("/get", getNavbar);
 router.post("/create", auth, createNavbar);
 
 export default router;

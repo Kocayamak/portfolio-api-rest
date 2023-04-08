@@ -8,7 +8,7 @@ import {
 
 const router = express.Router();
 
-router.get("/get", auth, getExperiences);
+router.get("/get", getExperiences);
 router.post("/create", auth, createExperiences);
 
 export default router;
