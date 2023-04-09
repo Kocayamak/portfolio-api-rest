@@ -15,7 +15,7 @@ const sendEmail = async (req, res) => {
     await transporter.sendMail(mailOptions);
 
     log.create({
-        process: "Send email",
+        process: "send_email",
         ip_adress: ip_adress,
     });
 
