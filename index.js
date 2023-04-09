@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import * as dotenv from "dotenv";
 import connectDB from "./config/database.js";
-import { authRoutes, navbarRoutes , experiencesRoutes, servicesRoutes, techRoutes } from "./routes/index.js";
+import { authRoutes, navbarRoutes , experiencesRoutes, servicesRoutes, techRoutes, emailRoutes } from "./routes/index.js";
 import cloudinaryConfig from "./config/cloudinary.js";
 
 dotenv.config();
@@ -19,6 +19,7 @@ app.use("/api/navbar", navbarRoutes);
 app.use("/api/experiences", experiencesRoutes);
 app.use("/api/services", servicesRoutes);
 app.use("/api/tech", techRoutes);
+app.use("/api/email", emailRoutes);
 
 app.get("/", (req, res) => {
   res.json({ msg: "Welcome to the ContactKeeper API..." });

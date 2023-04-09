@@ -3,5 +3,6 @@ import navbarRoutes from "./navbar.js";
 import experiencesRoutes from "./experiences.js";
 import servicesRoutes from "./services.js";
 import techRoutes from "./tech.js";
+import emailRoutes from "./email.js";
 
-export { authRoutes , navbarRoutes , experiencesRoutes , servicesRoutes , techRoutes};
+export { authRoutes , navbarRoutes , experiencesRoutes , servicesRoutes , techRoutes , emailRoutes};
