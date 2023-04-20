@@ -4,5 +4,6 @@ import experiencesRoutes from "./experiences.js";
 import servicesRoutes from "./services.js";
 import techRoutes from "./tech.js";
 import emailRoutes from "./email.js";
+import projectsRoutes from "./projects.js";
 
-export { authRoutes , navbarRoutes , experiencesRoutes , servicesRoutes , techRoutes , emailRoutes};
+export { authRoutes , navbarRoutes , experiencesRoutes , servicesRoutes , techRoutes , emailRoutes, projectsRoutes};
